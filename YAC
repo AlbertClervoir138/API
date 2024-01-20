@@ -1,0 +1,18 @@
+import discord
+from discord.ext import commands
+
+# CrÃ©er une instance du bot
+bot = commands.Bot(command_prefix='!')
+
+# ÃvÃ©nement de dÃ©marrage du bot
+@bot.event
+async def on_ready():
+    print(f'ConnectÃ© en tant que {.user.name}')
+
+# Commande simple
+@bot.command(name='ping')
+async def ping(ctx):
+    await ctx.send('Pong!')
+
+# Lancer le bot avec le token de votre application Discord
+bot.run('MTE5ODA4NTgxMjM2NjA4MjA4OA.GsjZkx.EtRCepLD2S3o5oHwtbFWL1H17oksqT5R1y9TG4')
